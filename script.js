@@ -11,3 +11,12 @@ functionajouterTache() {
 }
 const boutonAjout = document.getElementById("addTaskBtn");
 boutonAjout.addEventListener("click", ajouterTache);
+function activerSuppressionTache() {
+    const liste = document.getElementById("taskList");
+    liste.addEventListener("click", function(event) {
+        const elementClique = event.target;
+        if (elementClique.tagName === "LI") {
+            elementClique.remove();
+        }
+    });
+}
